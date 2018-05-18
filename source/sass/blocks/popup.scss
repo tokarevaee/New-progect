@@ -1,0 +1,13 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  margin: 0 auto;
+  z-index: 31;
+}
+
+.popup__show {
+  display: block;
+  animation: bounce 0.6s;
+}
