@@ -1,0 +1,9 @@
+.main-nav {
+  & ul {
+  @include for-ul;
+  }
+}
+
+.main-nav__toggle {
+ display: none;
+}

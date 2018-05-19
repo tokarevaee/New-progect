@@ -1,0 +1,36 @@
+.hulot {
+  background-color: #ffffff;
+  height: 450px;
+}
+
+.hulot__description {
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  & div {
+    padding: 90px 30px 0 30px;
+    text-align: justify;
+  }
+
+  & h2 {
+    text-align: center;
+  }
+
+  & p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 22.5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hulot {
+    height: 450px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+}

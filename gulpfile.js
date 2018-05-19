@@ -9,6 +9,17 @@ var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 
+gulp.task("styleb", function () {
+  gulp.src("source/sass/bootstrap-grid.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest("source/css"))
+    .pipe(minify())
+    .pipe(rename("bootstrap-grid.min.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
 gulp.task("style", function () {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -135,6 +146,7 @@ gulp.task("build", function (done) {
     "jsmin",
     "minify",
     "style",
+    "styleb",
     "sprite",
     "html",
     done

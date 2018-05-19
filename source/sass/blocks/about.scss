@@ -1,0 +1,40 @@
+.about {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.about p {
+  font-size: 13.5px;
+  line-height: 25.5px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    min-height: 355px;
+  }
+
+  .about__container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding-top: 85px;
+     padding-bottom: 85px;
+   }
+
+  .about h3 {
+    padding-top: 55px;
+  }
+
+  .about p {
+    max-width: 800px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .about__container {
+    max-width: 800px;
+  }
+}
