@@ -8,9 +8,9 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
-    "browser-sync": "2.23.x",
+    "browser-sync": "^2.24.4",
     "del": "^3.0.0",
-    "gulp": "3.9.x",
+    "gulp": "^3.9.1",
     "gulp-cheerio": "^0.6.3",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^4.0.0",
@@ -48,5 +48,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint"
   },
-  "version": "14.0.0"
+  "version": "14.0.0",
+  "dependencies": {
+    "gulp-autoprefixer": "^5.0.0"
+  }
 }
