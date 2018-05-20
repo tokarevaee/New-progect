@@ -1,19 +1,12 @@
-.la-borosa {
-  background-color: #ffffff;
-}
-
 .la-borosa__description {
-  height: 465px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  justify-content: center;
+  align-content: space-around;
 
   & div {
-    padding: 90px 30px 0 30px;
-    text-align: justify;
-  }
-
-  & h2 {
+    padding: 50px 30px 0 30px;
     text-align: center;
   }
 
@@ -21,15 +14,78 @@
     margin: 0;
     font-size: 12px;
     line-height: 22.5px;
+    text-align: justify;
+  }
+
+  .la-borosa__triangle {
+    font-size: 0;
+  }
+}
+
+@media (min-width: $mobile-width) {
+  .la-borosa {
+    height: 400px;
+  }
+
+  .la-borosa__description {
+    height: 400px;
+
+    & div {
+      padding: 50px 30px 0 30px;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .la-borosa {
-    height: 465px;
+    height: 420px;
   }
-}
 
-@media (min-width: $desktop-width) {
+  .la-borosa__description {
+    height: 420px;
+    align-content: space-between;
 
+    & div {
+      padding: 30px 30px 15px 30px;
+    }
+  }
+
+  .la-borosa__image-big {
+    position: relative;
+    background-image: url("../img/2velo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 740px 465px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/la-boriosa-logo.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 86px 89px;
+      width: 86px;
+      height: 89px;
+      top: 45%;
+      left: 45%;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+  .la-borosa__triangle {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      display: block;
+      transform: rotate(-45deg);
+      right: 45%;
+      top: -10px;
+    }
+  }
 }

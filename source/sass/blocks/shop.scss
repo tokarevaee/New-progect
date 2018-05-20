@@ -1,4 +1,29 @@
 .shop {
-  height: 555px;
   background-color: #282f35;
+  height: 160px;
+}
+.shop__photo {
+  display: none;
+}
+
+.shop__btn--wrapper {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .shop__btn--wrapper {
+  height: 150px;
+}
+
+  .shop {
+    height: 555px;
+  }
+
+  .shop__photo {
+     height: 400px;
+    display: block;
+   }
 }

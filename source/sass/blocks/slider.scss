@@ -1,27 +1,32 @@
 .slider {
   background-color: #f7f7f7;
-  height: 355px;
 }
 
 .slider__feedback {
-  width: 800px;
   margin: 0 auto;
   padding: 30px;
-  padding-top: 90px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
 }
 
-.slider__autor {
+.slider__item {
   text-align: center;
 }
 
-.slider__text {
-  text-align: center;
+@media (min-width: $mobile-width) {
+
 }
 
 @media (min-width: $tablet-width) {
+  .slider {
+    height: 355px;
+  }
 
+  .slider__feedback {
+    width: 800px;
+    padding-top: 90px;
+  }
 }
 
 @media (min-width: $desktop-width) {

@@ -92,15 +92,15 @@ var replace = require("gulp-replace");
 gulp.task("sprite", function () {
   return gulp.src("source/img/sprite/*.svg")
 
-    .pipe(cheerio({
-      run: function ($) {
-        $("[fill]").removeAttr("fill");
-        $("[stroke]").removeAttr("stroke");
-        $("[style]").removeAttr("style");
-      },
-      parserOptions: {xmlMode: true}
-    }))
-    .pipe(replace('&gt;', '>'))
+    //.pipe(cheerio({
+    //  run: function ($) {
+    //    $("[fill]").removeAttr("fill");
+    //    $("[stroke]").removeAttr("stroke");
+    //    $("[style]").removeAttr("style");
+    //  },
+    //  parserOptions: {xmlMode: true}
+    //}))
+    //.pipe(replace('&gt;', '>'))
   .pipe(svgstore({
     inlineSvg: true
   }))

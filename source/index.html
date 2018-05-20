@@ -11,67 +11,52 @@
     <!--<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">-->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-
     <meta http-equiv="x-ua-compatible" content="ie=edge">
   </head>
   <body>
-    <!--<div class="none"><include src="build/img/sprite.svg"></include></div>-->
+    <div class="none"><include src="build/img/sprite.svg"></include></div>
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="85" height="35" alt="Vintage">
-          </picture>
-        </a>
-        <ul class="main-nav__list1">
-          <li class="main-nav__item">
-            <a href="#">about us</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">work</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list2">
-          <li class="main-nav__item">
-            <a href="#">shop</a>
-          </li>
-          <li class="main-nav__item main-nav__item--basket">
-            <a href="#">contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <picture>
-          <!--<source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">-->
-          <!--<source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">-->
-          <!--<source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">-->
-          <!--<source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">-->
-          <!--<source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">-->
-          <img class="page-header_img" src="img/bg-header.png">
-        </picture>
-      </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list1">
+            <li class="main-nav__item">
+              <a href="#about">about us</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#work">work</a>
+            </li>
+          </ul>
+          <img class="page-header__logo" src="img/logo.png" width="72" height="65" alt="Vintage">
+          <ul class="main-nav__list2">
+            <li class="main-nav__item">
+              <a href="#shop">shop</a>
+            </li>
+            <li class="main-nav__item main-nav__item--basket">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+        </nav>
+      <div class="mx-auto no-gutters">
+          <div class="page-header__img"></div>
+        </div>
     </header>
     <main>
       <section class="about">
         <div class="about__container container">
-          <h3>A new generetion of vintage bike</h3>
+          <div><img src="img/about-icon.png" width="40" height="33"></div>
+          <h3 id="about">A new generetion of vintage bike</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
         </div>
       </section>
       <section class="vintage-oliva container">
-        <div class="row no-gutters">
-          <img class="col-md-8" src="img/1velo.jpg" width="951" height="451">
+        <div class="row no-gutters" id="work">
+          <div class="vintage-oliva__image-big col-md-8"></div>
           <div class="vintage-oliva__description col-md-4 no-gutters">
             <div>
+              <img src="img/vintage-oliva-icon.png">
               <h2>vintage oliva</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
             </div>
-            <img class="velo1" src="img/1velo1.jpg" width="400" height="150">
+            <span class="vintage-oliva__triangle"><img class="vintage-oliva__velo1" src="img/1velo1.jpg" width="400" height="150"></span>
           </div>
         </div>
       </section>
@@ -79,33 +64,36 @@
         <div class="row no-gutters">
           <div class="la-borosa__description col-md-4 no-gutters">
             <div>
+              <img src="img/la-boriosa-Icon.png">
               <h2>La Boriosa</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
             </div>
-            <img class="velo1" src="img/2velo1.jpg" width="400" height="150">
+            <span class="la-borosa__triangle"><img src="img/2velo1.jpg" width="400" height="150"></span>
           </div>
-          <img class="col-md-8" src="img/2velo.jpg" width="740" height="465">
+          <div class="la-borosa__image-big col-md-8 hidden-md-down visible-md"></div>
         </div>
       </section>
       <section class="hulot container">
         <div class="row no-gutters">
-        <img class="col-md-4 no-gutters" src="img/3velo.jpg" width="380" height="450">
-
-        <div class="col-md-4 hulot__description">
+          <div class="hulot__image-big col-md-4 no-gutters"></div>
+          <div class="col-md-4 hulot__description">
           <div>
+            <img src="img/huliot-icon.png">
             <h2>retrò Bike - M. Hulot</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
           </div>
-          <img class="velo1" src="img/3velo1.jpg" width="380" height="150">
+          <span class="hulot__triangle"><img src="img/3velo1.jpg" width="380" height="150"></span>
         </div>
-
-        <img class="col-md-4" src="img/3velo3.jpg" width="380" height="450">
+        <img class="col-md-4 hulot__velo3" src="img/3velo3.jpg" width="380" height="450">
         </div>
       </section>
       <section class="slider">
         <div class="container">
           <div class="slider__feedback">
             <div class="slider__item">
+              <svg class="icon-tw" width="26px" height="25px" role="presentation">
+                <use xlink:href="#icon-sprite-tw"></use>
+              </svg>
               <p class="slider__autor"><b>AOD New York  @aod</b> / 35 min</p>
               <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
             </div>
@@ -113,25 +101,36 @@
         <div class="slider__controls"></div>
         </div>
       </section>
-      <section class="shop">
+      <section class="shop" id="shop">
         <div class="container">
-          <div class="shop__photo"></div>
-          <div class="shop__btn--wrapper">
+          <div class="shop__photo">
+            <div class="row no-gutters">
+              <div class="col-md-4 row no-gutters">
+                <img class="col-md-6" src="img/shop2.jpg" width="180" height="200">
+                <img class="col-md-6" src="img/shop3.jpg" width="180" height="200">
+                <img class="col-md-12" src="img/shop1.jpg" width="360" height="200">
+              </div>
+              <img class="col-md-2" src="img/shop4.jpg" width="200" height="400">
+              <img class="col-md-2" src="img/shop5.jpg" width="200" height="400">
+              <div class="col-md-4 row no-gutters">
+                <img class="col-md-12" src="img/shop-bg.jpg" width="400" height="200">
+                <img class="col-md-6" src="img/shop6.jpg" width="180" height="200">
+                <img class="col-md-6" src="img/shop7.jpg" width="180" height="200">
+              </div>
+            </div>
+          </div>
+          <div class="shop__btn--wrapper container">
             <a href="#" class="btn shop__btn">Discover the shop</a>
           </div>
         </div>
       </section>
-      <section class="subscription">
-        <div class="container">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="85" height="35" alt="Vintage">
-          </picture>
+      <section class="subscription" id="contact">
+        <div class="container subscription__wrapper">
+          <img src="img/logo.png" width="72" height="65" alt="Vintage">
           <p>Stay on the saddle!</p>
           <form>
-            <input type="email">
-            <button type="submit">Go</button>
+            <input type="email" placeholder="enter your email...">
+            <button class="subscription__btn" type="submit">Go</button>
           </form>
         </div>
       </section>
@@ -139,12 +138,30 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-        <section class="contacts-footer col-md-4">
-          <p>AOD New York<br>
-            2250 Lexington Avenue<br>
-            New York, NY 10035  - info@domain.com</p>
+        <section class="contacts-footer col-sm-6 col-md-4">
+          <b>AOD New York</b>
+          <p>2250 Lexington Avenue<br>
+          New York, NY 10035  - info@domain.com</p>
         </section>
-        <section class="social-footer col-md-4">
+        <section class="social-footer col-sm-6 col-md-4">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Твиттере</span>
+            <svg class="icon-tw" width="26px" height="25px" role="presentation">
+              <use xlink:href="#icon-tw"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+            <svg class="icon-fb" width="26px" height="25px" role="presentation">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Мы в Пин</span>
+            <svg class="icon-pin" width="26px" height="25px" role="presentation">
+              <use xlink:href="#icon-pin"></use>
+            </svg>
+          </a>
         </section>
       </div>
       </div>
@@ -154,3 +171,4 @@
     <!--<script src="js/script.min.js"></script>-->
   </body>
 </html>
+

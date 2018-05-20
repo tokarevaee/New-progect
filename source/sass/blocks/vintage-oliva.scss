@@ -1,19 +1,12 @@
-.vintage-oliva {
-  background-color: #ffffff;
-}
-
 .vintage-oliva__description {
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  justify-content: center;
+  align-content: space-around;
 
   & div {
-    padding: 90px 30px 0 30px;
-    text-align: justify;
-  }
-
-  & h2 {
+    padding: 50px 30px 0 30px;
     text-align: center;
   }
 
@@ -21,15 +14,83 @@
     margin: 0;
     font-size: 12px;
     line-height: 22.5px;
+    text-align: justify;
+  }
+}
+
+.vintage-oliva__triangle {
+  padding: 0;
+  margin: 0;
+  display: block;
+  font-size: 0;
+}
+
+@media (min-width: $mobile-width) {
+  .vintage-oliva {
+    height: 400px;
+  }
+
+  .vintage-oliva__description {
+    height: 400px;
+
+    & div {
+      padding: 20px 30px 0 30px;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .vintage-oliva {
-    height: 450px;
+    height: 420px;
+  }
+
+  .vintage-oliva__description {
+    height: 420px;
+    align-content: space-between;
+
+    & div {
+      padding: 30px 30px 15px 30px;
+    }
+  }
+
+  .vintage-oliva__image-big {
+    position: relative;
+    max-height: 420px;
+    background-image: url("../img/1velo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/vintage-oliva-logo.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 86px 89px;
+      width: 86px;
+      height: 89px;
+      top: 45%;
+      left: 45%;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+  .vintage-oliva__triangle {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      display: block;
+      transform: rotate(-45deg);
+      right: 45%;
+      top: -10px;
+    }
   }
 }
 
-@media (min-width: $desktop-width) {
-
-}

@@ -1,20 +1,24 @@
 .hulot {
-  background-color: #ffffff;
-  height: 450px;
+  height: 400px;
+}
+
+.hulot__velo3 {
+  display: none;
+}
+
+.hulot__triangle {
+  font-size: 0;
 }
 
 .hulot__description {
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  justify-content: center;
+  align-content: space-around;
 
   & div {
-    padding: 90px 30px 0 30px;
-    text-align: justify;
-  }
-
-  & h2 {
+    padding: 50px 30px 0 30px;
     text-align: center;
   }
 
@@ -22,6 +26,21 @@
     margin: 0;
     font-size: 12px;
     line-height: 22.5px;
+    text-align: justify;
+  }
+}
+
+@media (min-width: $mobile-width) {
+  .hulot {
+    height: 400px;
+  }
+
+  .hulot__description {
+    height: 400px;
+
+    & div {
+      padding: 50px 30px 0 30px;
+    }
   }
 }
 
@@ -29,8 +48,57 @@
   .hulot {
     height: 450px;
   }
-}
 
-@media (min-width: $desktop-width) {
+  .hulot__description {
+    height: 450px;
+    align-content: space-between;
 
+    & div {
+      padding: 30px 30px 0 30px;
+    }
+  }
+
+  .hulot__image-big {
+    position: relative;
+    max-height: 450px;
+    background-image: url("../img/3velo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/vintage-oliva-logo.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 86px 89px;
+      width: 86px;
+      height: 89px;
+      top: 45%;
+      left: 45%;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+  .hulot__velo3 {
+    display: block;
+  }
+
+  .hulot__triangle {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      display: block;
+      transform: rotate(-45deg);
+      right: 45%;
+      top: -10px;
+    }
+  }
 }
