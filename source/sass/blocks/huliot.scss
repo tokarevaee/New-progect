@@ -1,13 +1,13 @@
 .hulot {
   height: 400px;
+
+  & span {
+    font-size: 0;
+  }
 }
 
 .hulot__velo3 {
   display: none;
-}
-
-.hulot__triangle {
-  font-size: 0;
 }
 
 .hulot__description {
@@ -28,6 +28,23 @@
     line-height: 22.5px;
     text-align: justify;
   }
+
+  .hulot__triangle {
+    position: relative;
+    font-size: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #ffffff;
+      display: block;
+      transform: rotate(-45deg);
+      right: 48%;
+      top: -10px;
+    }
+  }
 }
 
 @media (min-width: $mobile-width) {
@@ -46,21 +63,21 @@
 
 @media (min-width: $tablet-width) {
   .hulot {
-    height: 450px;
+    height: 400px;
   }
 
   .hulot__description {
-    height: 450px;
+    height: 400px;
     align-content: space-between;
 
     & div {
-      padding: 30px 30px 0 30px;
+      padding: 14px 30px 0 30px;
     }
   }
 
   .hulot__image-big {
     position: relative;
-    max-height: 450px;
+    max-height: 400px;
     background-image: url("../img/3velo.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -86,19 +103,24 @@
     display: block;
   }
 
-  .hulot__triangle {
-    position: relative;
+  .hulot__velo3 img{
+    height: 400px;
+    width: 100%;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ffffff;
-      display: block;
-      transform: rotate(-45deg);
-      right: 45%;
-      top: -10px;
+  .hulot__triangle img{
+    width: 230px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hulot__description {
+    & div {
+      padding: 30px 30px 0 30px;
     }
+  }
+
+  .hulot__triangle img{
+    width: 100%;
   }
 }

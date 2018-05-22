@@ -9,6 +9,23 @@ var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 
+
+gulp.task("styleoc", function () {
+  gulp.src("source/css/owl.carousel.css")
+    .pipe(minify())
+    .pipe(rename("owl.carousel.min.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("styleotd", function () {
+  gulp.src("source/css/owl.theme.default.css")
+    .pipe(minify())
+    .pipe(rename("owl.theme.default.min.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
 gulp.task("styleb", function () {
   gulp.src("source/sass/bootstrap-grid.scss")
     .pipe(plumber())
@@ -19,6 +36,7 @@ gulp.task("styleb", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
 
 gulp.task("style", function () {
   gulp.src("source/sass/style.scss")
@@ -147,6 +165,8 @@ gulp.task("build", function (done) {
     "minify",
     "style",
     "styleb",
+    "styleoc",
+    "styleotd",
     "sprite",
     "html",
     done

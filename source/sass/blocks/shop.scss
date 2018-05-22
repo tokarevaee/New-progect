@@ -15,15 +15,40 @@
 
 @media (min-width: $tablet-width) {
   .shop__btn--wrapper {
-  height: 150px;
-}
+    margin-top: 40px;
+    height: 50px;
+  }
 
   .shop {
-    height: 555px;
+    height: 400px;
+
+    & img {
+      height: 50%;
+    }
   }
 
   .shop__photo {
-     height: 400px;
+     height: 228px;
     display: block;
+    overflow: hidden;
    }
+}
+
+@media (min-width: $desktop-width) {
+  .shop {
+    height: 555px;
+
+    & img {
+      height: auto;
+    }
+  }
+
+  .shop__photo {
+    height: 400px;
+    display: block;
+  }
+
+  .shop__btn--wrapper {
+    margin-top: 50px;
+  }
 }

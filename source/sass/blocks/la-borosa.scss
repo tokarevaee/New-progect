@@ -15,10 +15,24 @@
     font-size: 12px;
     line-height: 22.5px;
     text-align: justify;
+
   }
 
   .la-borosa__triangle {
+    position: relative;
     font-size: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #ffffff;
+      display: block;
+      transform: rotate(-45deg);
+      right: 48%;
+      top: -10px;
+    }
   }
 }
 
@@ -70,22 +84,6 @@
       left: 45%;
       z-index: 1;
       display: block;
-    }
-  }
-
-  .la-borosa__triangle {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ffffff;
-      display: block;
-      transform: rotate(-45deg);
-      right: 45%;
-      top: -10px;
     }
   }
 }

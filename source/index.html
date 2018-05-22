@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,6 +11,8 @@
     <!--<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">-->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
   </head>
   <body>
@@ -55,8 +57,18 @@
               <img src="img/vintage-oliva-icon.png">
               <h2>vintage oliva</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+              <img src="img/line.png">
             </div>
-            <span class="vintage-oliva__triangle"><img class="vintage-oliva__velo1" src="img/1velo1.jpg" width="400" height="150"></span>
+            <span class="vintage-oliva__triangle">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">-->
+                <!--<source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">-->
+                <!--<source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">-->
+                <source media="(min-width: 992px)" srcset="img/1velo1.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/1velo1_768.jpg 1x">
+                <img class="vintage-oliva__velo1" src="img/1velo1.jpg" width="400" height="150">
+              </picture>
+            </span>
           </div>
         </div>
       </section>
@@ -67,8 +79,15 @@
               <img src="img/la-boriosa-Icon.png">
               <h2>La Boriosa</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+              <img src="img/line.png">
             </div>
-            <span class="la-borosa__triangle"><img src="img/2velo1.jpg" width="400" height="150"></span>
+            <span class="la-borosa__triangle">
+              <picture>
+                <source media="(min-width: 992px)" srcset="img/2velo1.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/2velo1_768.jpg 1x">
+                <img class="vintage-oliva__velo1" src="img/2velo1.jpg" width="400" height="150">
+              </picture>
+            </span>
           </div>
           <div class="la-borosa__image-big col-md-8 hidden-md-down visible-md"></div>
         </div>
@@ -76,20 +95,34 @@
       <section class="hulot container">
         <div class="row no-gutters">
           <div class="hulot__image-big col-md-4 no-gutters"></div>
-          <div class="col-md-4 hulot__description">
-          <div>
-            <img src="img/huliot-icon.png">
-            <h2>retrò Bike - M. Hulot</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+            <div class="col-md-4 hulot__description">
+            <div>
+              <img src="img/huliot-icon.png">
+              <h2>retrò Bike - M. Hulot</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+              <img src="img/line.png">
+            </div>
+              <span class="hulot__triangle">
+              <picture>
+                <source media="(min-width: 992px)" srcset="img/3velo1.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/3velo1_768.jpg 1x">
+                <img src="img/3velo1.jpg">
+              </picture>
+            </span>
           </div>
-          <span class="hulot__triangle"><img src="img/3velo1.jpg" width="380" height="150"></span>
-        </div>
-        <img class="col-md-4 hulot__velo3" src="img/3velo3.jpg" width="380" height="450">
+          <span class="hulot__velo3 col-md-4">
+          <picture>
+            <source media="(min-width: 992px)" srcset="img/3velo3.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/3velo3_768.jpg 1x">
+            <img src="img/3velo3.jpg">
+          </picture>
+            </span>
         </div>
       </section>
       <section class="slider">
         <div class="container">
-          <div class="slider__feedback">
+          <div class="owl-theme owl-carousel slider__feedback">
+
             <div class="slider__item">
               <svg class="icon-tw" width="26px" height="25px" role="presentation">
                 <use xlink:href="#icon-sprite-tw"></use>
@@ -97,8 +130,36 @@
               <p class="slider__autor"><b>AOD New York  @aod</b> / 35 min</p>
               <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
             </div>
+
+            <div class="slider__item">
+              <svg class="icon-tw" width="26px" height="25px" role="presentation">
+                <use xlink:href="#icon-sprite-tw"></use>
+              </svg>
+              <p class="slider__autor"><b>AOD New York  @aod</b> / 36 min</p>
+              <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+            </div>
+
+            <div class="slider__item">
+              <svg class="icon-tw" width="26px" height="25px" role="presentation">
+                <use xlink:href="#icon-sprite-tw"></use>
+              </svg>
+              <p class="slider__autor"><b>AOD New York  @aod</b> / 37 min</p>
+              <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+            </div>
+
+            <div class="slider__item">
+              <svg class="icon-tw" width="26px" height="25px" role="presentation">
+                <use xlink:href="#icon-sprite-tw"></use>
+              </svg>
+              <p class="slider__autor"><b>AOD New York  @aod</b> / 37 min</p>
+              <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+            </div>
+
           </div>
-        <div class="slider__controls"></div>
+          <!--<div class="owl-nav">-->
+            <!--<div class="owl-prev">prev</div>-->
+            <!--<div class="owl-next">next</div>-->
+          <!--</div>-->
         </div>
       </section>
       <section class="shop" id="shop">
@@ -106,16 +167,16 @@
           <div class="shop__photo">
             <div class="row no-gutters">
               <div class="col-md-4 row no-gutters">
-                <img class="col-md-6" src="img/shop2.jpg" width="180" height="200">
-                <img class="col-md-6" src="img/shop3.jpg" width="180" height="200">
-                <img class="col-md-12" src="img/shop1.jpg" width="360" height="200">
+                <img class="col-md-6" src="img/shop2.jpg">
+                <img class="col-md-6" src="img/shop3.jpg">
+                <img class="col-md-12" src="img/shop1.jpg">
               </div>
-              <img class="col-md-2" src="img/shop4.jpg" width="200" height="400">
-              <img class="col-md-2" src="img/shop5.jpg" width="200" height="400">
+              <img class="col-md-2" src="img/shop4.jpg">
+              <img class="col-md-2" src="img/shop5.jpg">
               <div class="col-md-4 row no-gutters">
-                <img class="col-md-12" src="img/shop-bg.jpg" width="400" height="200">
-                <img class="col-md-6" src="img/shop6.jpg" width="180" height="200">
-                <img class="col-md-6" src="img/shop7.jpg" width="180" height="200">
+                <img class="col-md-12" src="img/shop-bg.jpg">
+                <img class="col-md-6" src="img/shop6.jpg">
+                <img class="col-md-6" src="img/shop7.jpg">
               </div>
             </div>
           </div>
@@ -166,8 +227,13 @@
       </div>
       </div>
     </footer>
-    <!--<script src="js/picturefill.min.js"></script>-->
-    <!--<script src="js/svgxuse.min.js"></script>-->
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/svgxuse.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>$(document).ready(function(){
+      $('.owl-carousel').owlCarousel();
+    });</script>
     <!--<script src="js/script.min.js"></script>-->
   </body>
 </html>
